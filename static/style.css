@@ -1,0 +1,185 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.instagram_logo{
+    background-image: url("https://static.cdninstagram.com/rsrc.php/v3/yx/r/WtxJZZ3-9ZP.png");
+    background-position: 0px 0px;
+    background-size: 120px 156px;
+    width: 120px;
+    height: 43px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-color: white;
+}
+.menubar{
+    font-size: 20px;
+}
+.menubar li{
+    display: block;
+    display: flex;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 1%;
+    padding: 2%;
+    padding-left: 10%;
+}
+
+.menubar a :hover{
+    background-color: rgb(246, 242, 242);
+    font-weight: bold;
+}
+.menubar a{
+    text-decoration: none;
+}
+.menubar{
+    text-decoration: none;
+}
+.menubar li p{
+    margin-top: 8%;
+    font-size: small;
+}
+.story_circle {
+    /* float: left; */
+    margin: 0px;
+    padding: 0px;
+    height: 75px;
+    width: 75px;
+    border-width: 5px;
+    padding: 2px;
+    background-image: linear-gradient(to right top, #f2f20d, red, rgb(209, 63, 170));
+    border-radius: 50%;
+}
+
+.story_circle_outer {
+    float: left;
+    padding: 0px;
+    padding-left: 5px;
+    height: 95px;
+    width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: smaller;
+}
+
+.story_circle img {
+    width: 150%;
+    border: 2px solid white;
+    height: 150%;
+    object-fit: fill;
+    border-radius: 50%;
+}
+
+
+.icons {
+    font-size: 25px;
+}
+
+.icons i {
+    margin-top: 5px;
+    float: left;
+    margin-right: 30px;
+}
+
+.hide_extra {
+    height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.inpbnon:focus {
+    outline: none;
+    border: none;
+}
+.ending_links a{
+    color: rgb(211, 209, 209);
+    font-size: 13px;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.profile_div{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    object-fit: fill;
+    justify-content: center;
+
+}
+.profile_div img{
+    height: 150%;
+    width: 150%;
+}
+.profile_div_btn{
+    background-color: rgb(233, 234, 235); 
+    border-radius: 10px; 
+    border: none; 
+    padding: 3%; 
+    font-size: 13px;
+    font-weight: 600;
+}
+.pfrfl{
+    font-weight: 400; 
+    font-size: 18px; 
+    color: rgb(75, 72, 72);
+}
+.pfrfl span{
+    font-weight: 600;
+}
+.bio{
+    font-size: 15px ; 
+    text-decoration: none;
+    font-weight: 400;
+    font-family:'Times New Roman', Times, serif; 
+    text-decoration: none;
+    font-style: normal;
+
+}
+.highlight_div{
+    height: 100px;
+    width: 100px;
+    border: 1px solid rgb(187, 183, 183);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    object-fit: fill;
+    justify-content: center;
+
+}
+.highlight_div img{
+    height: 150%;
+    width: 150%;
+}
+.pst a{
+    text-decoration: none;
+    margin-left: 9%;
+    color: rgb(134, 131, 131);
+    font-weight: 500;
+    font-size: 15px;    
+
+}
+.pst{
+    margin-top: -18px;
+}
+.postofuser{
+    height: 350px;
+    padding: 3px;
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    overflow: hidden;
+    
+}
+.postofuser img{
+    height: 125%;
+    width: 100%;
+}

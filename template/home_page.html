@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/038400d214.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<!-- <link rel="stylesheet" href="/static/style.css"> -->
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .instagram_logo{
+            background-image: url("https://static.cdninstagram.com/rsrc.php/v3/yx/r/WtxJZZ3-9ZP.png");
+            background-position: 0px 0px;
+            background-size: 120px 156px;
+            width: 120px;
+            height: 43px;
+            background-repeat: no-repeat;
+            display: inline-block;
+            background-color: white;
+        }
+        .menubar{
+            font-size: 20px;
+        }
+        .menubar li{
+            display: block;
+            display: flex;
+            align-items: center;
+            color: black;
+            text-decoration: none;
+            border-radius: 10px;
+            margin-top: 1%;
+            padding: 2%;
+            padding-left: 10%;
+        }
+        
+        .menubar a :hover{
+            background-color: rgb(246, 242, 242);
+            font-weight: bold;
+        }
+        .menubar a{
+            text-decoration: none;
+        }
+        .menubar{
+            text-decoration: none;
+        }
+        .menubar li p{
+            margin-top: 10%;
+            font-size: small;
+        }
+        .story_circle {
+            margin: 0px;
+            padding: 0px;
+            height: 70px;
+            width: 70px;
+            border-width: 5px;
+            padding: 2px;
+            background-image: linear-gradient(to right top, #f2f20d, red, rgb(209, 63, 170));
+            border-radius: 50%;
+        }
+        .highlight_div{
+            height: 100px;
+            width: 100px;
+            border: 1px solid rgb(187, 183, 183);
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            object-fit: fill;
+            justify-content: center;
+        
+        }
+        .highlight_div img{
+            height: 150%;
+            width: 300%;
+        }
+        .story_circle_outer {
+            padding: 0px;
+            padding-left: 5px;
+            height: 95px;
+            width: 80px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: smaller;
+        }
+
+        .story_circle img {
+            width: 100%;
+            border: 2px solid white;
+            height: 100%;
+            object-fit: fill;
+            border-radius: 50%;
+        }
+
+        
+        .icons {
+            font-size: 25px;
+        }
+
+        .icons i {
+            margin-top: 5px;
+            margin-right: 30px;
+        }
+
+        .hide_extra {
+            height: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .inpbnon:focus {
+            outline: none;
+            border: none;
+        }
+        .ending_links a{
+            color: rgb(211, 209, 209);
+            font-size: 13px;
+            margin-left: -8px;
+            margin-right: -8px;
+        }
+
+    </style> 
+
+</head>
+<body>
+    <div class="container-fluid overflow-hidden">
+        <div class="row ">
+            <div class="col-2 " style="border-right:1px solid rgb(237, 230, 230) ; ">
+                <div style="height: 100vh; width: 100%;" class="p-2 mt-5">
+                    <div class="">
+                        <i class="instagram_logo" ></i>
+                    </div>
+                    <ul class="menubar">
+                        <a href="#" style="font-weight: bold;"><li ><i class="fa-solid fa-house"></i>&nbsp;&nbsp;<p>Home</p></li></a>
+                        <a href="#"><li ><i class="fa-solid fa-search"></i>&nbsp;&nbsp;<p>Search</p></li></a>
+                        <a href="#"><li ><i class="fa-solid fa-compass"></i>&nbsp;&nbsp;<p>Explore</p></li></a>
+                        <a href="#"><li ><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;<p>Reels</p></li></a>
+                        <a href="#"><li ><i class="fa-solid fa-comment-dots"></i>&nbsp;&nbsp;<p>Messages</p></i></li></a>
+                        <a href="#"><li ><i class="fa-regular fa-heart"></i>&nbsp;&nbsp;<p>Notifications</p></i></li></a>
+                        <a href="#" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><li ><i class="fa-regular fa-square-plus"></i>&nbsp;&nbsp;<p>Create</p></li></a>
+                        <a href="/profile_page"><li ><i class="fa-regular fa-circle-user"></i>&nbsp;&nbsp;<p>Profile</p></li></a>
+                        <a href="#"><li ><i class="fa-solid fa-bars"></i>&nbsp;&nbsp;<p>More</p></li></a>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-7 mt-5">
+
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+
+                         <div class="row pl-2 story_line">
+                    <div class="story_circle_outer">
+                        <div class="story_circle">
+                            <img src="/static/downloaded/std1.jpg" alt="">
+                        </div>
+                        usernameextrahkjkh
+                    </div>
+                    <div class="story_circle_outer">
+                        <div class="story_circle">
+                            <img src="/static/downloaded/std1.jpg" alt="">
+                        </div>
+                        usernameextrahkjkh
+                    </div>
+                    <div class="story_circle_outer">
+                        <div class="story_circle">
+                            <img src="/static/downloaded/std1.jpg" alt="">
+                        </div>
+                        usernameextrahkjkh
+                    </div>
+                    <div class="story_circle_outer">
+                        <div class="story_circle">
+                            <img src="/static/downloaded/std1.jpg" alt="">
+                        </div>
+                        usernameextrahkjkh
+                    </div>
+                    <div class="story_circle_outer">
+                        <div class="story_circle">
+                            <img src="/static/downloaded/std1.jpg" alt="">
+                        </div>
+                        usernameextrahkjkh
+                    </div>
+                    
+                    <div class="story_circle_outer">
+                        <div class="story_circle">
+                            <img src="/static/downloaded/std1.jpg" alt="">
+                        </div>
+                        usernameextrahkjkh
+                    </div>
+                    <div class="story_circle_outer">
+                        <div class="story_circle">
+                            <img src="/static/downloaded/std1.jpg" alt="">
+                        </div>
+                        usernameextrahkjkh
+                    </div>
+                    <div class="story_circle_outer">
+                        <div class="story_circle">
+                            <img src="/static/downloaded/std1.jpg" alt="">
+                        </div>
+                        usernameextrahkjkh
+                    </div>
+                    
+                </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="row pl-2 story_line">
+                            <div class="story_circle_outer">
+                                <div class="story_circle">
+                                    <img src="/static/downloaded/std1.jpg" alt="">
+                                </div>
+                                usernameextrahkjkh
+                            </div>
+                            <div class="story_circle_outer">
+                                <div class="story_circle">
+                                    <img src="/static/downloaded/std1.jpg" alt="">
+                                </div>
+                                usernameextrahkjkh
+                            </div>
+                            <div class="story_circle_outer">
+                                <div class="story_circle">
+                                    <img src="/static/downloaded/std1.jpg" alt="">
+                                </div>
+                                usernameextrahkjkh
+                            </div>
+                            
+                            <div class="story_circle_outer">
+                                <div class="story_circle">
+                                    <img src="/static/downloaded/std1.jpg" alt="">
+                                </div>
+                                usernameextrahkjkh
+                            </div>
+                            <div class="story_circle_outer">
+                                <div class="story_circle">
+                                    <img src="/static/downloaded/std1.jpg" alt="">
+                                </div>
+                                usernameextrahkjkh
+                            </div>
+                            <div class="story_circle_outer">
+                                <div class="story_circle">
+                                    <img src="/static/downloaded/std1.jpg" alt="">
+                                </div>
+                                usernameextrahkjkh
+                            </div>
+                            <div class="story_circle_outer">
+                                <div class="story_circle">
+                                    <img src="/static/downloaded/std1.jpg" alt="">
+                                </div>
+                                usernameextrahkjkh
+                            </div>
+                            <div class="story_circle_outer">
+                                <div class="story_circle">
+                                    <img src="/static/downloaded/std1.jpg" alt="">
+                                </div>
+                                usernameextrahkjkh
+                            </div>
+                            
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="row pl-2 story_line">
+                            <div class="story_circle_outer">
+                                <div class="story_circle">
+                                    <img src="/static/downloaded/std1.jpg" alt="">
+                                </div>
+                                usern
+                            </div>
+                            <div class="story_circle_outer">
+                                <div class="story_circle">
+                                    <img src="/static/downloaded/std1.jpg" alt="">
+                                </div>
+                                usern
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" style="height: 25px;  margin-top: 23px; margin-left: -40px;" >
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next" style="height: 25px;  margin-top: 23px; margin-right: 35px;">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+
+                  
+                  
+
+
+
+
+
+                {% for data in all_posts %}
+
+                <div class="row mt-3">
+                    <div class="col-2"></div>
+                    <div class="col-8 p-0 ">
+                        <div class="row">
+                            <div class="col-1  p-0 ">
+                            <a href="/view_profile_of_frind?id={{data.post_user_det.id}}">
+
+                                <div class="story_circle_outer ml-2"
+                                    style="width:105% ; height: 100%; ">
+
+                                    <div class="story_circle " style="height: 40px; width: 40px; ">
+                                        <img src="{% if data.post_user_det.uphoto %}/{{data.post_user_det.uphoto}}{% else %}/static/downloaded/default_user.png{% endif %}" alt="">
+                                    </div>
+                                </div>
+                        </a>
+
+                            </div>
+                            <div class="col-9 " style="line-height: 1px;">
+                                <p class=" mt-2 ml-2"
+                                    style="font-weight: 500;font-size: 15px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                                    {{data.post_user_det.ufull_name}} &nbsp; &bull; &nbsp;<span
+                                        style="color: gray; font-weight:normal ;"> {{data.post_time}}</span>
+                                        &nbsp; &nbsp;<span style="color: rgb(17, 35, 233); font-weight:bold ; cursor: pointer; {% if data.isfollow == 'Yes' %} display: none; {% endif %}" class="follow{{data.post_user_det.id}}" onclick="add_follow('{{data.post_user_det.id}}')">Follow</span>
+                                        &nbsp; &nbsp;<span style="color: rgb(17, 35, 233); font-weight:bold ; cursor: pointer; {% if data.isfollow == 'No' %} display: none; {% endif %}" class="unfollow{{data.post_user_det.id}}" onclick="remove_follow('{{data.post_user_det.id}}')">Unfollow</span>
+                                    </p><br>
+                                <p class=" ml-2" style="font-size: 13px;">{{data.post_location}}</p>
+                            </div>
+
+                            <div class="col-2  d-flex justify-content-center">
+                                <a href="#" style="color: black; ">
+                                    <i class="fa-solid fa-ellipsis h-100 w-100"></i>
+                                </a>
+
+                            </div> 
+                        </div>
+                        <div class="col-12 border m-0 p-0 bg-dark mt-3 d-flex rounded justify-content-center overflow-hidden"
+                            style="height: 500px;">
+                            <img src="/{{data.post_photo}}" height="auto" width='auto' alt="">
+                        </div>
+                        <div class="col-12 m-0 p-0 icons">
+                            <i class="fa-regular fa-heart" style="{% if data.islike == 'Yes' %} display: none; {% endif %}" id="e{{data.id}}" onclick="add_like('{{data.id}}')"></i>
+                            <i class="fa-solid fa-heart" style="color: red; {% if data.islike == 'No' %} display: none; {% endif %}" id="f{{data.id}}" onclick="remove_like('{{data.id}}')" ></i>
+                            <i class="fa-regular fa-comment"></i>
+                            <i class="fa-regular fa-paper-plane"></i>
+                            <i class="fa-regular fa-bookmark" style=" margin-left: 50%;"></i>
+                        </div>
+                        <div class="col-12 p-0" style=" font-weight: 500; ">
+                            <span id="like-count" style="font-size: 14px; color: black;"><span id="k{{data.id}}">{{data.post_likes}} </span>&nbsp;likes</span>
+                        </div>
+                        <div class="col-12 p-0 hide_extra " id="a{{forloop.counter}}">
+                            <pre
+                                style="font-size: 15px ; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-decoration: none;font-style: normal;"><span style="font-weight:600;">{{data.post_user_det.ufull_name}} &nbsp;</span>{{data.post_caption}}
+                        </pre>
+                        </div>
+                        <div class="col-12  p-0" style="line-height: 15px; color: gray;" id="b{{forloop.counter}}">
+                            ...<br>
+                            <div onclick="seealldescri('{{forloop.counter}}')" style="cursor: pointer;">more</div>
+                        </div>
+                        <div class="col-12 p-0 mt-2 ">
+                            <p style="cursor:pointer; color: gray; font-size:14px; {% if data.post_comment == 0 %}display: none;{% else %}{% endif %}" onclick="handleAjaxRequest('{{data.id}}')">View all {{data.post_comment}} comment</p>
+                        </div>          
+                        <div class="col-12 p-0 mt-2 " id="all_comments{{forloop.counter}}">
+                        </div>
+                        <div class="row" style="width: 100%;">
+                            <div class="col-10">
+                                    <input type="text" class="inpbnon" id="c{{forloop.counter}}" onkeyup="displaybutton('{{forloop.counter}}')" placeholder="Add a comment.."
+                                        style="border: 0px solid #ccc;  width: 100%; font-size:14px;">
+                            </div>
+                            <div class="col-2">
+                                    <button onclick="savecomment('{{forloop.counter}}','{{data.id}}')" style="border: none; background-color:transparent; display: none;"
+                                        id="d{{forloop.counter}}">Post</button>
+                            </div>
+                        </div>
+                        <div class=" col-12  mt-2  p-0">
+                            <hr>
+
+                        </div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                {% endfor %}
+                
+            <!-- second post  -->
+            
+            </div>
+            <div class="col-3 mt-5">{% for udet in user %}
+                <div class="row p-0">
+                    <div class="col-4 p-0 ">
+                        <div class="story_circle ml-3 overflow-hidden d-flex justify-content-center" style="height: 70px; width: 70px; padding: 0px;">
+                            <img src="{% if udet.uphoto %}/{{udet.uphoto}}{% else %}/static/downloaded/default_user.png{% endif %}" style="height: 150%; width: 150%; margin-top: -11px;" alt="">
+                        </div>
+                    </div>
+                    <div class="col-6 p-0 pt-2" style="line-height: 20px; ">
+                        <p class="hide_extra " style="font-weight: bolder;font-size: 14px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">{{udet.user_name}}</p>
+                        <p class="hide_extra " style="margin-top: -15px;font-weight: 400; font-size: 14px; color:  rgb(100, 95, 95);">{{udet.ufull_name}}</p>
+                    </div>
+                    <div class="col-2 p-0 pt-4">
+                        <a style="border: none; cursor: pointer;  font-size: 13px; width: 100%; font-weight: bold; color: rgb(82, 82, 216); padding: 0px;">Switch</a>
+                    </div>
+
+                </div>
+                {% endfor %}
+                <div class="row">
+                    <div class="col-10">
+                        <p style=" font-size: 15px; font-weight: 500; margin-top: 10px; color: gray;">Suggested for you</p>
+                    </div>
+                    <div class="col-2 p-0 pt-2">
+                        <a style=" font-size: 14px; font-weight: 500;  ">See All</a>
+                    </div>
+                </div>
+                <div class="row p-0">
+                    <div class="col-2 p-0 d-flex justify-content-center">
+                        <div class="story_circle" style=" height: 40px; width: 40px; padding: 0px;">
+                            <img src="/static/downloaded/std1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-8 p-0 " style="line-height: 20px; font-size: 14px; ">
+                        <p class="hide_extra " style="font-weight: bolder;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">user Infegf</p>
+                        <p class="hide_extra " style="margin-top: -18px;font-weight: 400; font-size: 14px; color:  rgb(100, 95, 95);">user user name fewfsjbsbc d cjc c c b c </p>
+                    </div>
+                    <div class="col-2 p-0 pt-2  d-flex justify-content-center">
+                        <a style="border: none; cursor: pointer;  font-size: 13px; width: 100%; font-weight: bold; color: rgb(82, 82, 216); padding: 0px;">Follow</a>
+                    </div>
+
+                </div>
+                <div class="row p-0">
+                    <div class="col-2 p-0 d-flex justify-content-center">
+                        <div class="story_circle" style=" height: 40px; width: 40px; padding: 0px;">
+                            <img src="/static/downloaded/std1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-8 p-0 " style="line-height: 20px; font-size: 14px;">
+                        <p class="hide_extra " style="font-weight: bolder;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">user Infegf</p>
+                        <p class="hide_extra " style="margin-top: -18px; font-weight: 400; font-size: 14px; color:  rgb(100, 95, 95); ">user user name fewfsjbsbc d cjc c c b c </p>
+                    </div>
+                    <div class="col-2 p-0 pt-2  d-flex justify-content-center">
+                        <a style="border: none; cursor: pointer;  font-size: 13px; width: 100%; font-weight: bold; color: rgb(82, 82, 216); padding: 0px;">Follow</a>
+                    </div>
+
+                </div>
+                <div class="row ending_links mt-5 d-block" style="color: rgb(228, 223, 223); font-size: x-small;">
+                    <a href="">home</a>&bull;
+                    <a href="">Hepl</a>&bull;
+                    <a href="">Press</a>&bull;
+                    <a href="">API</a>&bull;
+                    <a href="">Jobs</a>&bull;
+                    <a href="">Privacy</a>&bull;
+                    <a href="">Terms</a>&bull;
+                    <a href="">Locatios</a>&bull;
+                    <a href="">Language</a>&bull;
+                    <a href="">Meta Verified</a>
+                </div>
+                <div class="row mt-3" style="font-size: 12px; color: #ccc;">
+                    © 2023 INSTAGRAM FROM Tejas Tathe
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+
+
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Create New Post</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row d-flex justify-content-center">
+                <div style="height: 200px; width: 200px;">
+                <img src="/static/downloaded/photo_logo.jpeg" height="100%"  width="100%"  alt="">
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center" style="font-size: 25px; font-weight: 400;">
+                Drag photos and videos here
+            </div>
+            <form id="postForm" action="/add_post/" method="post" enctype="multipart/form-data">{% csrf_token %}
+                <div class="row d-flex justify-content-center mt-5 mb-5">
+                    <label for="profilePhotoInputN" class="btn btn-primary w-50">Select From Computer</label>
+                    <input type="file" name="post1" id="profilePhotoInputN" hidden onchange="submitForm(postForm)">                
+                </div>               
+        </form>
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+             
+    <!-- all comment modal start  -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    </div>
+    <!-- all comment modal end  -->   
+    <!-- add post modal start        -->
+    <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    
+    </div>
+    <!-- add post modal start        -->
+
+<script>
+    function seealldescri(a) {
+        var attt = document.getElementById("a"+a);
+        var JH = document.getElementById("b"+a);
+        JH.style.display = 'none';
+        attt.classList.remove("hide_extra");
+    }
+</script>
+<script>
+    function openModal() {
+      $(`#staticBackdrop`).modal('show');
+    }
+    function handleAjaxRequest(post_id) {
+        console.log(post_id)
+      $.ajax({ 
+        "url": "mymodel",
+        "data": { 'post_id': post_id },
+        success: function (data) 
+        {
+            $("#staticBackdrop").html(data);
+            openModal();
+        },
+        error: function (error) {
+          console.error('Error occurred during the AJAX request:', error);
+        }
+      });
+    } 
+</script>
+<script>
+    function submitForm(form)
+    {
+        var form_data = new FormData(document.getElementById("postForm"));
+        $.ajax({
+            url: '/add_post/',
+            type: "POST",
+            data:  form_data,
+            contentType: false,
+            cache: false,
+            processData: false,
+            success: function (data) {
+                function openModal2() {
+                    $(`#staticBackdrop2`).modal('show');
+                }
+                function handleAjaxRequest2() {
+                    $.ajax({ 
+                        url: "add_detail_of_post",
+                        success: function (data) {
+                            $("#staticBackdrop2").html(data);
+                            $("#exampleModalToggle").modal('hide');
+                            openModal2();
+                        },
+                        error: function (error) {
+                            console.error('Error occurred during the AJAX request:', error);
+                        }
+                    });
+                }
+                handleAjaxRequest2(); 
+            },
+            error: function(data) {
+                console.log(data);
+            }           
+        });
+    }
+</script>   
+<script>
+    function displaybutton(b) {
+        var jhc = document.getElementById("c"+b);
+        ded = jhc.value
+        var ekjsx = document.getElementById("d"+b);
+        if (ded) {
+            ekjsx.style.display = 'inline';
+        }
+        else {
+            ekjsx.style.display = 'none';
+        }
+    }
+    function savecomment(id,post_id)
+    {
+        var data = document.getElementById("c"+id).value;
+        document.getElementById("all_comments"+id).innerHTML += "<div class='d-block mb-2'>"+data+"</div>";
+        document.getElementById("c"+id).value ="";
+        var ekjsx3 = document.getElementById("d"+id);
+        ekjsx3.style.display = 'none';
+        $.ajax({
+            "url":"save_comment",
+            "data": {'post_id':post_id,'comment':data}
+        })
+    }
+    
+    function add_like(id)
+    {
+        // add_like
+        const counterSpan = document.getElementById("k"+id);
+        let currentValue = parseInt(counterSpan.innerText);
+        currentValue++;
+        counterSpan.innerText = currentValue;
+        var add_liken = document.getElementById("e"+id);
+        add_liken.style.display = 'none';
+        var remove_liken = document.getElementById("f"+id);
+        remove_liken.style.display = 'inline';
+
+        // add _like1 
+        try{
+        var counterSpan1 = document.getElementById("l"+id);
+        let currentValue1 = parseInt(counterSpan1.innerText);
+        currentValue1++;
+        counterSpan1.innerText = currentValue1;
+        var add_liken = document.getElementById("g"+id);
+        add_liken.style.display = 'none';
+        var remove_liken = document.getElementById("h"+id);
+        remove_liken.style.display = 'inline';
+        console.log("done");
+        }
+        catch{
+            console.error()
+        }
+
+        $.ajax({
+            "url":"add_like",
+            "data": {'post_id':id},
+            success: function () {
+                console.log("Done");
+            },
+            error: function (error) {
+                console.error('Error occurred during the AJAX request:', error);
+            }
+        })
+    }
+    function remove_like(id)
+    {   
+        // remove_like
+        const counterSpan1 = document.getElementById("k"+id);
+        let currentValue1 = parseInt(counterSpan1.innerText);
+        currentValue1--;
+        counterSpan1.innerText = currentValue1;
+        var add_likep = document.getElementById("e"+id);
+        add_likep.style.display = 'inline';
+        var remove_likep = document.getElementById("f"+id);
+        remove_likep.style.display = 'none';
+
+        // remove_like1
+        try{
+        const counterSpan = document.getElementById("l"+id);
+        let currentValue = parseInt(counterSpan.innerText);
+        currentValue--;
+        counterSpan.innerText = currentValue;
+        var add_likep = document.getElementById("g"+id);
+        add_likep.style.display = 'inline';
+        var remove_likep = document.getElementById("h"+id);
+        remove_likep.style.display = 'none';
+        }
+        catch{
+            console.error()
+        }
+        $.ajax({
+            "url":"remove_like",
+            "data": {'post_id':id}
+        })   
+    }
+</script>
+<script>
+    function add_like1(id)
+  {
+        // add_like1
+        const counterSpan1 = document.getElementById("l"+id);
+        let currentValue1 = parseInt(counterSpan1.innerText);
+        currentValue1++;
+        counterSpan1.innerText = currentValue1;
+        var add_liken = document.getElementById("g"+id);
+        add_liken.style.display = 'none';
+        var remove_liken = document.getElementById("h"+id);
+        remove_liken.style.display = 'inline';
+
+        // add_like
+        const counterSpan = document.getElementById("k"+id);
+        let currentValue = parseInt(counterSpan.innerText);
+        currentValue++;
+        counterSpan.innerText = currentValue;
+        var add_liken = document.getElementById("e"+id);
+        add_liken.style.display = 'none';
+        var remove_liken = document.getElementById("f"+id);
+        remove_liken.style.display = 'inline';
+        $.ajax({
+            "url":"add_like",
+            "data": {'post_id':id}
+        })
+  }
+  function remove_like1(id)
+  {
+        // remove_like1
+        const counterSpan = document.getElementById("l"+id);
+        let currentValue = parseInt(counterSpan.innerText);
+        currentValue--;
+        counterSpan.innerText = currentValue;
+        var add_likep = document.getElementById("g"+id);
+        add_likep.style.display = 'inline';
+        var remove_likep = document.getElementById("h"+id);
+        remove_likep.style.display = 'none';
+
+        // remove_like
+        const counterSpan1 = document.getElementById("k"+id);
+        let currentValue1 = parseInt(counterSpan1.innerText);
+        currentValue1--;
+        counterSpan1.innerText = currentValue1;
+        var add_likep = document.getElementById("e"+id);
+        add_likep.style.display = 'inline';
+        var remove_likep = document.getElementById("f"+id);
+        remove_likep.style.display = 'none';
+      $.ajax({
+          "url":"remove_like",
+          "data": {'post_id':id}
+      })   
+  }
+  function displaybutton1() {
+      var jhc1 = document.getElementById("i");
+      ded1 = jhc1.value
+      var ekjsx1 = document.getElementById("j");
+      if (ded1) {
+          ekjsx1.style.display = 'inline';
+      }
+      else {
+          ekjsx1.style.display = 'none';
+      }
+  }
+  function savecomment1(post_id)
+  {
+      var data = document.getElementById("i").value;
+      document.getElementById("i").value ="";
+      var ekjsx4 = document.getElementById("j");
+      ekjsx4.style.display = 'none';
+      $.ajax({
+          "url":"save_comment",
+          "data": {'post_id':post_id,'comment':data}
+      })
+  }
+</script>
+<script>
+    function add_follow(id)
+    {
+        console.log("follaw"+id)
+        // add_like
+        var add_liken = document.getElementsByClassName("follow" + id);
+        for (var i = 0; i < add_liken.length; i++) {
+            add_liken[i].style.display = 'none';
+        }
+        var remove_liken = document.getElementsByClassName("unfollow" + id);
+        for (var i = 0; i < remove_liken.length; i++) {
+            remove_liken[i].style.display = 'inline';
+        }
+        // add _like1 
+        // try{
+        // counterSpan1.innerText = currentValue1;
+        // var add_liken = document.getElementById("g"+id);
+        // add_liken.style.display = 'none';
+        // var remove_liken = document.getElementById("h"+id);
+        // remove_liken.style.display = 'inline';
+        // console.log("done");
+        // }
+        // catch{
+        //     console.error()
+        // }
+
+        $.ajax({
+            "url":"add_follow",
+            "data": {'follow_id':id},
+            success: function () {
+                console.log("Done");
+            },
+            error: function (error) {
+                console.error('Error occurred during the AJAX request:', error);
+            }
+        })
+    }
+    function remove_follow(id)
+    {   
+        // remove_like
+        console.log("Unfollow "+id)
+        var add_liken = document.getElementsByClassName("follow" + id);
+        for (var i = 0; i < add_liken.length; i++) {
+            add_liken[i].style.display = 'inline';
+        }
+        var remove_liken = document.getElementsByClassName("unfollow" + id);
+        for (var i = 0; i < remove_liken.length; i++) {
+            remove_liken[i].style.display = 'none';
+        }
+        // remove_like1
+        // try{
+        // counterSpan.innerText = currentValue;
+        // var add_likep = document.getElementById("g"+id);
+        // add_likep.style.display = 'inline';
+        // var remove_likep = document.getElementById("h"+id);
+        // remove_likep.style.display = 'none';
+        // }
+        // catch{
+        //     console.error()
+        // }
+        $.ajax({
+            "url":"remove_follow",
+            "data": {'follow_id':id}
+        })   
+    }
+</script>   

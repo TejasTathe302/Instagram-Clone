@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/038400d214.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <style>
+        *{
+    margin: 0px;
+    padding: 0px;
+}
+.instagram_logo{
+    background-image: url("https://static.cdninstagram.com/rsrc.php/v3/yx/r/WtxJZZ3-9ZP.png");
+    background-position: 0px 0px;
+    background-size: 120px 156px;
+    width: 120px;
+    height: 43px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-color: white;
+}
+.menubar{
+    font-size: 20px;
+}
+.menubar li{
+    display: block;
+    display: flex;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 1%;
+    padding: 2%;
+    padding-left: 10%;
+}
+
+.menubar a :hover{
+    background-color: rgb(246, 242, 242);
+    font-weight: bold;
+}
+.menubar a{
+    text-decoration: none;
+}
+.menubar{
+    text-decoration: none;
+}
+.menubar li p{
+    margin-top: 8%;
+    font-size: small;
+}
+.story_circle {
+    /* float: left; */
+    margin: 0px;
+    padding: 0px;
+    height: 75px;
+    width: 75px;
+    border-width: 5px;
+    padding: 2px;
+    background-image: linear-gradient(to right top, #f2f20d, red, rgb(209, 63, 170));
+    border-radius: 50%;
+}
+
+.story_circle_outer {
+    float: left;
+    padding: 0px;
+    padding-left: 5px;
+    height: 95px;
+    width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: smaller;
+}
+
+.story_circle img {
+    width: 150%;
+    border: 2px solid white;
+    height: 150%;
+    object-fit: fill;
+    border-radius: 50%;
+}
+
+
+.icons {
+    font-size: 25px;
+}
+
+.icons i {
+    margin-top: 5px;
+    float: left;
+    margin-right: 30px;
+}
+
+.hide_extra {
+    height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.inpbnon:focus {
+    outline: none;
+    border: none;
+}
+.ending_links a{
+    color: rgb(211, 209, 209);
+    font-size: 13px;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.ending_linksl a{
+    color: rgb(169, 166, 166);
+    font-size: 13px;
+    margin-left: 10px;
+    margin-right: 8px;
+}
+.profile_div{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    object-fit: fill;
+    justify-content: center;
+
+}
+.profile_div img{
+    height: 150%;
+    width: 150%;
+}
+.profile_div_btn{
+    background-color: rgb(233, 234, 235); 
+    border-radius: 10px; 
+    border: none; 
+    padding: 3%; 
+    font-size: 13px;
+    font-weight: 600;
+}
+.pfrfl{
+    font-weight: 400; 
+    font-size: 18px; 
+    color: rgb(75, 72, 72);
+}
+.pfrfl span{
+    font-weight: 600;
+}
+.bio{
+    font-size: 15px ; 
+    text-decoration: none;
+    font-weight: 400;
+    font-family:'Times New Roman', Times, serif; 
+    text-decoration: none;
+    font-style: normal;
+
+}
+.highlight_div{
+    height: 100px;
+    width: 100px;
+    border: 1px solid rgb(187, 183, 183);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    object-fit: fill;
+    justify-content: center;
+
+}
+.highlight_div img{
+    height: 150%;
+    width: 300%;
+}
+.pst a{
+    text-decoration: none;
+    margin-left: 9%;
+    color: rgb(134, 131, 131);
+    font-weight: 500;
+    font-size: 15px;    
+
+}
+.pst{
+    margin-top: -18px;
+}
+.postofuser{
+    height: 350px;
+    padding: 3px;
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    overflow: hidden;
+    
+}
+.postofuser img{
+    height: 125%;
+    width: 100%;
+}
+.accocenter li{
+    display: block;
+    margin-top: 4%;
+}
+.accocenter2 li{
+    display: block;
+    margin-top: 6%;
+}
+.editphead{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-weight: 700;
+}
+
+
+    </style>   
+</head>
+
+<body>
+    <div class="container-fluid overflow-hidden">
+        <div class="row ">
+            <div class="col-2 " style="border-right:1px solid rgb(237, 230, 230) ;">
+                <div style="height: 100vh; width: 100%;" class="p-2 mt-5">
+                    <div class="">
+                        <i class="instagram_logo" ></i>
+                    </div>
+                    <ul class="menubar">
+                        <a href="#"><li ><i class="fa-solid fa-house"></i>&nbsp;&nbsp;<p>Home</p></li></a>
+                        <a href="#"><li ><i class="fa-solid fa-search"></i>&nbsp;&nbsp;<p>Search</p></li></a>
+                        <a href="#"><li ><i class="fa-solid fa-compass"></i>&nbsp;&nbsp;<p>Explore</p></li></a>
+                        <a href="#"><li ><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;<p>Reels</p></li></a>
+                        <a href="#"><li ><i class="fa-solid fa-comment-dots"></i>&nbsp;&nbsp;<p>Messages</p></i></li></a>
+                        <a href="#"><li ><i class="fa-regular fa-heart"></i>&nbsp;&nbsp;<p>Notifications</p></i></li></a>
+                        <a href="#"><li ><i class="fa-regular fa-square-plus"></i>&nbsp;&nbsp;<p>Create</p></li></a>
+                        <a href="#"style="font-weight: bold;"><li ><i class="fa-regular fa-circle-user"></i>&nbsp;&nbsp;<p>Profile</p></li></a>
+                        <a href="#"><li ><i class="fa-solid fa-bars"></i>&nbsp;&nbsp;<p>More</p></li></a>
+                    </ul>
+                </div>
+            </div>             <div class="col-10 mt-5 p-5">
+                <div class="row mb-3" style="font-weight: 600; font-size: xx-large;">Settings</div>
+
+                <div class="row" style="border: 1px solid rgb(198, 194, 194);">
+                    <div class="col-4 "
+                        style="border-right: 1px solid rgb(198, 194, 194);">
+                        <div class="row p-5">
+                        <ul class="accocenter" style="font-size: small;">
+                            <li style="font-weight: 600; font-size: large;"><i
+                                    class="fa-brands fa-meta text-primary"></i>Meta</li>
+                            <li style="font-weight: 600; font-size: large;">Account center</li>
+                            <li>Manage your connected experiences and account settings across Meta technologies.</li>
+                            <li><i class="fa-regular fa-user"></i>&nbsp; Personal Details</li>
+                            <li><i class="fa-regular fa-circle-check"></i>&nbsp; Password And Security</li>
+                            <li><i class="fa-regular fa-keyboard"></i>&nbsp; Add Preference</li>
+                            <li style="font-weight: 600; font-size: 16px;" class="text-primary">See more account center
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row pr-4"><hr></div>
+                    
+                    <div class="row p-5">
+                        <ul class="accocenter2" style="font-size: 15px;">
+                            <li style="font-weight: bold;">Edit profile</li>
+                            <li>Apps and websites</li>
+                            <li>Email notifications</li>
+                            <li>Push notifications</li>
+                            <li> What you see</li>
+                            <li>Who can see your content</li>
+                            <li>How others can interact with you</li>
+                            <li>Supervision</li>
+                            <li>Help</li>
+                            <li class="text-primary" style="font-weight: 600; font-size: 14px;">Switch to professional
+                                account</li>
+                        </ul>
+                    </div>
+                </div>
+
+                    <div class="col-8 p-5">
+                        {% for data in user %}
+                        <form action="/save_edited_user/" method="post" enctype="multipart/form-data">{% csrf_token %}
+                            <div class="row" style="font-weight: 400; font-size: xx-large;">Edit Profile</div>
+                            <div class="row">
+                                
+                                <div class="col-3 editphead mt-3">
+                                    <div class=" highlight_div ml-3" style=" height: 50px;width: 50px;">
+                                        <img src="{% if data.uphoto %}/{{data.uphoto}}{% else %}/static/downloaded/default_user.png{% endif %}" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="hide_extra" style="margin-top: 5%; height: 25px;">{{data.user_name}}</div>
+                                    <a href="#" id="changePhotoLink" style="text-decoration: none; font-weight: 600;font-size: 14px;">Change Profile Photo</a>
+                                    <input type="file" name="uphoto" id="profilePhotoInput" hidden >
+                                </div>
+                                <div class="col-3"></div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-3 editphead mt-3">
+                                    <p>Website</p>
+                                </div>
+                                <div class="col-6" style="margin-top: 5%;">
+                                    <div class="row" style="width: 100%;"><input name="uwebsite" value=""  style="height:25px ; width: 100%;cursor: no-drop;" placeholder="Website" disabled ></input></div>
+                                    <div class="row" style=" width: 100%;font-size: xx-small; ">Editing your links is only available on mobile. Visit the Instagram app and edit your profile to change the websites in your bio.</div>
+                                </div>
+                                <div class="col-3"></div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-3 editphead mt-4">
+                                    <p>Full Name</p>
+                                </div>
+                                <div class="col-6 form-group" style="margin-top: 5%;">
+                                    <div class="row" style="width: 100%;"><input name="ufull_name" class="form-control"  style="height:25px ; width: 100%;" value="{{data.ufull_name}}" ></input></div>
+                                </div>
+                                <div class="col-3"></div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-3 editphead mt-4">
+                                    <p>User Name</p>
+                                </div>
+                                <div class="col-6" style="margin-top: 5%;">
+                                    <div class="row" style="width: 100%;"><input name="user_name"  style="height:25px ; width: 100%;" value="{{data.user_name}}" ></input></div>
+                                </div>
+                                <div class="col-3"></div>
+
+                            </div>
+
+                            
+                            <div class="row">
+                                <div class="col-3 editphead mt-3">
+                                    <p>Bio</p>
+                                </div>
+                                <div class="col-6" style="margin-top: 5%;">
+                                    <textarea name="ubio" onkeyup="countCharacters(this)"    style=" height: 50px; max-height: 50px; width: 100% " maxlength="157"  placeholder="Add Your Bio"  >{{data.ubio}}</textarea>
+                                    <p id="charCount" style="color: rgb(187, 25, 25);">157/0</p>
+                                </div>
+                                <div class="col-3"></div>
+
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-3 editphead mt-2">
+                                    <p>Gender</p>
+                                </div>
+                                <div class="col-6" style="margin-top: 2%;">
+                                    <div class="row" style="width: 100%;"><input data-bs-toggle="modal" data-bs-target="#staticBackdrop" readonly style="height:25px ; width: 100%;" placeholder="{{data.ugender}}"></input>
+                                    
+                                    
+                                    
+                                    
+                                    <!-- Modal start -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 " style="margin-left:40%;" id="staticBackdropLabel"> Gender</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body d-flex justify-content-center" style="font-size:20px; font-weight:500;">
+          <ul >
+              <li class="d-block"><input type="radio" value="Custom" name="ugender">&nbsp;&nbsp;Custom</li>
+              <li class="d-block"><input type="radio" value="Female" name="ugender">&nbsp;&nbsp;Female</li>
+              <li class="d-block"><input type="radio" value="Male" name="ugender">&nbsp;&nbsp;Male</li>
+              <li class="d-block"><input type="radio" value="Prafer to not say" {% if data.ugender %} {% else%} checked {% endif %}  name="ugender">&nbsp;&nbsp;Prafer to not say</li>
+          </ul>
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <button type="button" class="btn btn-primary w-75" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modal end -->
+                                    </div>
+                                    <div class="row" style=" width: 100%;font-size: xx-small; ">This won't be part of your public profile.</div>
+                                </div>
+                                <div class="col-3"></div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-3 editphead mt-2">
+                                    <p>Show account suggestions on profiles</p>
+                                </div>
+                                <div class="col-6" style="margin-top: 2%; display: flex; justify-content: center; align-items: center;">
+                                    <div style="margin-right: 10px;"><input type="checkbox" ></input></div>
+                                    <div  style="font-size: 13.5px; font-weight: 700;">Choose whether people can see similar account suggestions on your profile, and whether your account can be suggested on other profiles.[?]</div>
+                                </div>
+                                <div class="col-3"></div>
+
+                            </div>
+                            <div class="row mt-4" style="display: flex; justify-content: center;">
+                                <button type="submit" class="btn btn-primary  w-25">Submit</button>
+                            </div>
+                        </form>
+                        {% endfor %}
+                    </div>
+
+                    
+
+                </div>
+
+
+                <div class="row ending_linksl mt-3 d-block pl-5 pr-5" style="color: rgb(228, 223, 223); font-size: x-small;">
+                    <a href="">home</a>&bull;
+                    <a href="">Hepl</a>&bull;
+                    <a href="">Press</a>&bull;
+                    <a href="">API</a>&bull;
+                    <a href="">Jobs</a>&bull;
+                    <a href="">Privacy</a>&bull;
+                    <a href="">Terms</a>&bull;
+                    <a href="">Locatios</a>&bull;
+                    <a href="">Language</a>&bull;
+                    <a href="">Meta Verified</a>
+                </div>
+                <div class="row mt-3 d-flex justify-content-center" style="font-size: 13px; color: #cecbcb;">
+                    © 2023 INSTAGRAM FROM Tejas Tathe
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
+
+<script>
+    // edit profile photo without swohwing input type file 
+
+    // Get references to the link and input elements
+    const changePhotoLink = document.getElementById('changePhotoLink');
+    const profilePhotoInput = document.getElementById('profilePhotoInput');
+
+    // Add a click event listener to the link element
+    changePhotoLink.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent default link behavior
+
+        // Programmatically trigger the click event on the hidden input element
+        profilePhotoInput.click();
+    });
+
+    // Add a change event listener to the input element to handle the selected file
+    // profilePhotoInput.addEventListener('change', function() {
+    //     // Do something with the selected file, for example, display the file name
+    //     if (profilePhotoInput.files.length > 0) {
+    //         const fileName = profilePhotoInput.files[0].name;
+    //         alert('Selected file: ' + fileName);
+    //     }
+    // });
+
+
+
+    // count characters in textarea 
+
+    function countCharacters(textarea) {
+        const text = textarea.value;
+        const charCountElement = document.getElementById('charCount');
+        const charCount = text.length;
+        charCountElement.textContent = `157/ ${charCount}`;
+}
+</script>

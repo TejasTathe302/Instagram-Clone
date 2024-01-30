@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/038400d214.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <style>
+        *{
+    margin: 0px;
+    padding: 0px;
+}
+.instagram_logo{
+    background-image: url("https://static.cdninstagram.com/rsrc.php/v3/yx/r/WtxJZZ3-9ZP.png");
+    background-position: 0px 0px;
+    background-size: 120px 156px;
+    width: 120px;
+    height: 43px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-color: white;
+}
+.menubar{
+    font-size: 20px;
+}
+.menubar li{
+    display: block;
+    display: flex;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 1%;
+    padding: 2%;
+    padding-left: 10%;
+}
+
+.menubar a :hover{
+    background-color: rgb(246, 242, 242);
+    font-weight: bold;
+}
+.menubar a{
+    text-decoration: none;
+}
+.menubar{
+    text-decoration: none;
+}
+.menubar li p{
+    margin-top: 8%;
+    font-size: small;
+}
+.story_circle {
+    /* float: left; */
+    margin: 0px;
+    padding: 0px;
+    height: 75px;
+    width: 75px;
+    border-width: 5px;
+    padding: 2px;
+    background-image: linear-gradient(to right top, #f2f20d, red, rgb(209, 63, 170));
+    border-radius: 50%;
+}
+
+.story_circle_outer {
+    float: left;
+    padding: 0px;
+    padding-left: 5px;
+    height: 95px;
+    width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: smaller;
+}
+
+.story_circle img {
+    width: 150%;
+    border: 2px solid white;
+    height: 150%;
+    object-fit: fill;
+    border-radius: 50%;
+}
+
+
+.icons {
+    font-size: 25px;
+}
+
+.icons i {
+    margin-top: 5px;
+    float: left;
+    margin-right: 30px;
+}
+
+.hide_extra {
+    height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.inpbnon:focus {
+    outline: none;
+    border: none;
+}
+.ending_links a{
+    color: rgb(211, 209, 209);
+    font-size: 13px;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.ending_linksl a{
+    color: rgb(169, 166, 166);
+    font-size: 13px;
+    margin-left: 10px;
+    margin-right: 8px;
+}
+.profile_div{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    object-fit: fill;
+    justify-content: center;
+
+}
+.profile_div img{
+    height: 150%;
+    width: 150%;
+}
+.profile_div_btn{
+    background-color: rgb(233, 234, 235); 
+    border-radius: 10px; 
+    border: none; 
+    padding: 3%; 
+    font-size: 13px;
+    font-weight: 600;
+}
+.pfrfl{
+    font-weight: 400; 
+    font-size: 18px; 
+    color: rgb(75, 72, 72);
+}
+.pfrfl span{
+    font-weight: 600;
+}
+.bio{
+    font-size: 15px ; 
+    text-decoration: none;
+    font-weight: 400;
+    font-family:'Times New Roman', Times, serif; 
+    text-decoration: none;
+    font-style: normal;
+
+}
+.highlight_div{
+    height: 100px;
+    width: 100px;
+    border: 1px solid rgb(187, 183, 183);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    object-fit: fill;
+    justify-content: center;
+
+}
+.highlight_div img{
+    height: 150%;
+    width: 150%;
+}
+.pst a{
+    text-decoration: none;
+    margin-left: 9%;
+    color: rgb(134, 131, 131);
+    font-weight: 500;
+    font-size: 15px;    
+
+}
+.pst{
+    margin-top: -18px;
+}
+.postofuser{
+    height: 350px;
+    padding: 3px;
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    overflow: hidden;
+    
+}
+.postofuser img{
+    height: 125%;
+    width: 100%;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid overflow-hidden">
+        <div class="row ">
+            <div class="col-2 " style="border-right:1px solid rgb(237, 230, 230) ;">
+                <div style="height: 100vh; width: 100%;" class="p-2 mt-5">
+                    <div class="">
+                        <i class="instagram_logo" ></i>
+                    </div>
+                    <ul class="menubar">
+                        <a href="#"><li ><i class="fa-solid fa-house"></i>&nbsp;&nbsp;<p>Home</p></li></a>
+                        <a href="#"><li ><i class="fa-solid fa-search"></i>&nbsp;&nbsp;<p>Search</p></li></a>
+                        <a href="#"><li ><i class="fa-solid fa-compass"></i>&nbsp;&nbsp;<p>Explore</p></li></a>
+                        <a href="#"><li ><i class="fa-solid fa-circle-play"></i>&nbsp;&nbsp;<p>Reels</p></li></a>
+                        <a href="#"><li ><i class="fa-solid fa-comment-dots"></i>&nbsp;&nbsp;<p>Messages</p></i></li></a>
+                        <a href="#"><li ><i class="fa-regular fa-heart"></i>&nbsp;&nbsp;<p>Notifications</p></i></li></a>
+                        <a href="#"><li ><i class="fa-regular fa-square-plus"></i>&nbsp;&nbsp;<p>Create</p></li></a>
+                        <a href="#"style="font-weight: bold;"><li ><i class="fa-regular fa-circle-user"></i>&nbsp;&nbsp;<p>Profile</p></li></a>
+                        <a href="#"><li ><i class="fa-solid fa-bars"></i>&nbsp;&nbsp;<p>More</p></li></a>
+                    </ul>
+                </div>
+            </div>  
+                     <div class="col-10">
+                {% for data in user %}
+                <div class="row mt-5">
+                    <div class="col-4  d-flex justify-content-center" style="align-items: center;">
+                        <div class=" profile_div">
+                            <img src="{% if data.uphoto %}/{{data.uphoto}}{% else %}/static/downloaded/default_user.png{% endif %}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <div class="row">
+                            <div class="col-4 hide_extra p-0 " style="font-weight:400; font-size: 18px; height: 25px;">
+                                {{data.ufull_name}}
+                            </div>
+                            <div class="col-7">
+                                <a href="/edit_profile"><button class="profile_div_btn">&nbsp;&nbsp; Edit Profile
+                                        &nbsp;&nbsp;</button></a>&nbsp;&nbsp;&nbsp;
+                                <a href="#"><button class="profile_div_btn">&nbsp; View Archive &nbsp;</button></a>
+                            </div>
+                            <div class="col-1">
+                                <a href="#" style="color: black; font-size: x-large;"><i
+                                        class="fa-solid fa-gear"></i></a>
+                            </div>
+                        </div>
+                        <div class="row mt-3 p-0 pfrfl">
+                            <p><span>{{total_post}}&nbsp;</span>Posts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>500&nbsp;</span>Followers&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span>500&nbsp;</span>Followings</p>
+                        </div>
+                        <div class="row">
+                            <p style="font-weight: 500;">User_id</p>
+                            <pre style="margin-top: -15px;" class="bio">
+{{data.ubio}}
+</pre>
+                        </div>
+
+                    </div>
+                    <div class="col-3"><a href="/log_out"><button class="btn btn-danger">Log Out</button></a></div>
+                </div>
+                {% endfor %}
+                <div class="row mt-5 pl-2 " style="height: 110px; width: 100%; overflow: hidden;">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class=" highlight_div ml-5" style=" height: 100px;width: 100px; align-items: center;">
+                                <a href=""> <i class="fa-solid fa-plus "
+                                        style="font-size: 50px; color: rgb(216, 213, 213); font-weight:lighter; "></i></a>
+                            </div>
+                        </div>
+                        <div class="col-10">
+
+
+                            <div id="carouselExample" class="carousel slide">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="row">
+                                        <div class=" highlight_div ml-3 p-0" style=" height: 100px;width: 100px;">
+                                            <img src="/static/downloaded/std1.jpg" alt="">
+                                        </div>
+                                        <div class=" highlight_div ml-3 p-0" style=" height: 100px;width: 100px;">
+                                            <img src="/static/downloaded/std2.webp" alt="">
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="carousel-item"></div>
+                                    <div class="row">
+                                        <div class=" highlight_div ml-3 p-0" style=" height: 100px;width: 100px;">
+                                            <img src="/static/downloaded/std1.jpg" alt="">
+                                        </div>
+                                        <div class=" highlight_div ml-3 p-0" style=" height: 100px;width: 100px;">
+                                            <img src="/static/downloaded/images.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item"></div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                                    data-bs-slide="prev" style="height: 25px;  margin-top: 33px; margin-left: -40px;">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                                    data-bs-slide="next" style="height: 25px;  margin-top: 33px; margin-right: -45px;">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-5 pl-5 pr-5">
+                    <hr>
+                    <div class="col-4"></div>
+                    <div class="col-4 pst">
+                        <a href="" style="text-decoration: overline;color: black;"><i class="fa-solid fa-table-cells"></i> POSTS</a>
+                        <a href=""><i class="fa-regular fa-bookmark"></i> SAVED</a>
+                        <a href=""><i class="fa-solid fa-user-tag"></i> TAGGED</a>
+                    </div>
+                    <div class="col-4"></div>
+
+                    {% for posts in user_posts %}
+                    <div class="col-4 postofuser">
+                        <img src="/{{posts.post_photo}}" alt="">
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+
+                <div class="row ending_linksl mt-3 d-block pl-5 pr-5" style="color: rgb(228, 223, 223); font-size: x-small;">
+                    <a href="">home</a>&bull;
+                    <a href="">Hepl</a>&bull;
+                    <a href="">Press</a>&bull;
+                    <a href="">API</a>&bull;
+                    <a href="">Jobs</a>&bull;
+                    <a href="">Privacy</a>&bull;
+                    <a href="">Terms</a>&bull;
+                    <a href="">Locatios</a>&bull;
+                    <a href="">Language</a>&bull;
+                    <a href="">Meta Verified</a>
+                </div>
+                <div class="row mt-3 d-flex justify-content-center" style="font-size: 13px; color: #cecbcb;">
+                    © 2023 INSTAGRAM FROM Tejas Tathe
+                </div>
+                
+
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+</html>

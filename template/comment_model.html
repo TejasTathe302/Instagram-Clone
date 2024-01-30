@@ -1,0 +1,120 @@
+<button type="button" class="btn-close " style="background-color: white; margin: 10px; float: right;" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-dialog modal-lg" >
+          <div class="modal-content" id="model_content_id">
+<div class="modal-body p-0">
+    <div class="row" style="height: 500px; ">
+      <div class="col-6 p-0 " style="height:500px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; overflow: hidden;" >
+            <img src="/{{post_det.post_photo}}" style="height:100%;width:100%;"   alt="">
+      </div>
+      <div class="col-6">
+
+        <!-- comment user_det  -->
+        <div class="row mt-3 pb-0">
+        <div class="col-2" >
+          <div class="story_circle_outer "
+          style="width:105% ; height: 100%; ">
+          <div class="story_circle " style="height: 35px; width: 35px; ">
+              <img src="/{{post_det.post_user_det.uphoto}}" alt="">
+          </div>
+      </div>
+    </div>
+          <div class="col-9 pl-0" style="line-height: 2px;">
+            <p class=" mt-2"style="font-weight: 500;font-size: 15px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"> {{post_det.post_user_det.ufull_name}}
+              &nbsp; &nbsp;<span style="color: rgb(17, 35, 233); font-weight:bold ; cursor: pointer; {% if isfollow == 'Yes' %} display: none; {% endif %}" class="follow{{post_det.post_user_det.id}}" onclick="add_follow('{{post_det.post_user_det.id}}')">Follow</span>
+              &nbsp; &nbsp;<span style="color: rgb(17, 35, 233); font-weight:bold ; cursor: pointer; {% if isfollow == 'No' %} display: none; {% endif %}" class="unfollow{{post_det.post_user_det.id}}" onclick="remove_follow('{{post_det.post_user_det.id}}')">Unfollow</span>
+            </p>
+            <p class=" mt-0" style="font-size: 13px;">{{post_det.post_location}}</p>
+          </div>
+        <div class="col-1 pl-0">
+          <a href="#" style="color: black; ">
+            <i class="fa-solid fa-ellipsis h-100 w-100"></i>
+        </a>
+        </div>
+      </div>
+      <hr>
+        <!-- comment user_det end -->
+        <!-- post descreption -->
+      <div style="height: 280px;  overflow-y: scroll; overflow-x:hidden;">
+      <div class="row pt-1 pb-0">
+        <div class="col-2" >
+          <div class="story_circle_outer "
+          style="width:105% ; height: 100%; ">
+          <div class="story_circle " style="height: 35px; width: 35px; ">
+              <img src="/{{post_det.post_user_det.uphoto}}" alt="">
+          </div>
+      </div>
+    </div>
+
+          <div class="col-9 pl-0" style=" height: auto;">
+            <p class=" "style="font-weight: 500;font-size: 15px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"
+            > {{post_det.post_user_det.ufull_name}}</p>&nbsp; <pre style="font-size: 15px ;margin-top: -45px; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-decoration: none;font-style: normal; overscroll-behavior-block:none ;"
+>{{post_det.post_caption}}
+</pre>
+          </div>
+        <div class="col-1 pl-0">
+          <a href="#" style="color: black; ">
+        </a>
+        </div>
+      </div>
+      <!-- post descreption end  -->
+
+      <!-- comment for  loop start  -->
+      {% for comment_data in comment_detalils %}
+      <div class="row pt-0 pb-0">
+        <div class="col-2" >
+          <div class="story_circle_outer "
+          style="width:105% ; height: 100%; ">
+          <div class="story_circle " style="height: 35px; width: 35px; ">
+              <img src="/{{comment_data.who_comment.uphoto}}" alt="">
+          </div>
+      </div>
+    </div>
+
+          <div class="col-9 pl-0" style=" height: auto;">
+            <p class=" "style="font-weight: 500;font-size: 15px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"> {{comment_data.who_comment.ufull_name}}</p>&nbsp; <pre style="font-size: 15px ;margin-top: -45px; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-decoration: none;font-style: normal; overscroll-behavior-block:none ;"
+>{{comment_data.pComment}}</pre>
+          <p style="font-size: 13px; margin-top: -15px; color: rgb(215, 212, 212);">time &nbsp; &nbsp; 1 likes &nbsp; &nbsp; Replay</p>
+          </div>
+        <div class="col-1 pl-0">
+          <a href="#" style="color: black; ">
+            <i class="fa-regular fa-heart h-100 w-100"></i>
+        </a>
+        </div>
+      </div>
+      {% endfor %}
+      <!-- comment for  loop  end -->
+
+
+    </div>
+    <hr class="pb-0 mb-0">
+    <div class="row pl-3 pt-0 m-0" >
+      <div class="col-12 m-0 p-0 " style="font-size: 22px; ">
+        <i class="fa-regular fa-heart " style="{% if islike == 'Yes' %} display: none; {% endif %}" id="g{% if post_det.id %}{{post_det.id}}{% else %}0{% endif %}" onclick="add_like1('{% if post_det.id %}{{post_det.id}}{% else %}0{% endif %}')"></i>
+        <i class="fa-solid fa-heart " style="color: red; {% if islike == 'No' %} display: none; {% endif %}" id="h{% if post_det.id %}{{post_det.id}}{% else %}0{% endif %}" onclick="remove_like1('{% if post_det.id %}{{post_det.id}}{% else %}0{% endif %}')" ></i>
+        <i class="fa-regular fa-comment ml-3" ></i>
+        <i class="fa-regular fa-paper-plane ml-3"></i>
+        <i class="fa-regular fa-bookmark" style=" margin-left: 59%;"></i>
+
+       
+    </div>
+    </div>
+    <div class="row mt-2" style="line-height: 0px;">
+      <p style="color: rgb(64, 65, 65); font-weight: 600;"><span id="l{% if post_det.id %}{{post_det.id}}{% else %}0{% endif %}">{{post_det.post_likes}}</span> likes</p>
+      <p style="color: rgb(167, 168, 168); font-size: small;">{{post_det.post_time}}</p>
+    </div>
+    <div class="row" style="width: 100%;">
+      <div class="col-10">
+              <input type="text" class="inpbnon" id="i" onkeyup="displaybutton1()" placeholder="Add a comment.."
+                  style="border: 0px solid #ccc;  width: 100%; font-size:14px;">
+      </div>
+      <div class="col-2">
+              <button onclick="savecomment1('{% if post_det.id %}{{post_det.id}}{% else %}0{% endif %}')" style="border: none; background-color:transparent; display: none;"
+                  id="j">Post</button>
+      </div>
+  </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+

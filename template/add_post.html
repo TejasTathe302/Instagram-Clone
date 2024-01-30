@@ -1,0 +1,72 @@
+    <div class="modal-dialog modal-lg" style="width: 600px;">
+      <div class="modal-content">
+        <form action="/final_post_save/" method="post" enctype="multipart/form-data">{% csrf_token %}
+        <div class="modal-header">
+          <a href="/canclePost"><button type="button" style="border: none; color: rgb(180, 52, 10); font-size: 18px; font-weight: 600; background-color: transparent;"  onclick="alert('Discart Post Succesfully')">Discart</button></a>
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Create New Post</h1>
+          <button type="submit"  style="border: none; color: rgb(67, 67, 199); font-size: 18px; font-weight: 600; background-color: transparent;" onclick="alert('Post Save Succesfully ')" >Share</button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-6 p-3" style="height: 350px;  ">
+                <div style="width: 100%; height: 100%;overflow: hidden;border-radius: 3px; display: flex; justify-content: center; border: 1px solid rgb(217, 216, 216); background-color: black;">
+                    <img src="{% for data in post1 %} /{{data.upost}} {% endfor %}" style="height: 100%;width: auto;" width="auto" alt="" >
+                </div>
+            </div>
+            <div class="col-6">
+                {% for data in user %}
+                <div class="row">
+                    <div class=" highlight_div ml-3 p-0 col-3" style=" height: 35px;width: 35px; border: 1px solid gray;">
+                        <img src="{% if data.uphoto %}/{{data.uphoto}}{% else %}/static/downloaded/images.jpg {% endif %}"   alt="">
+                    </div>
+                    <div class="hide_extra col-9" style="font-weight: 500;">
+                        {{data.ufull_name}}
+                    </div>
+                </div>
+                {% endfor %}
+                <div class="row mt-3 overflow-hidden">
+                    <textarea name="post_caption"onkeyup="countCharacters(this)" maxlength="2000" placeholder="Write a Caption..." style="width: 100%;color: gray; height: 100px;max-height: 100px; border: none;"></textarea>
+                    <p id="charCount" style="color: rgb(75, 72, 72); margin-left: 75%;">157/0</p>
+                   <hr> 
+                </div>
+                <div class="row  "  >
+                    <div class="col-10">
+                    <input type="text"   name="post_location" style="width: 100%; height: 25px; border: 0px solid transparent; margin-top: -2px; margin-right: -2px; font-size: 16px; font-weight: 500;"placeholder='Location' >
+                </div>
+                <div class="col-2">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <hr class="mt-4">
+
+                </div>
+                <div class="row  p-0"  >
+                    <p class="d-inline-flex gap-1">
+                        <p  data-bs-toggle="collapse" style="font-weight: 700;" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                          #Tags <i class="fa-solid fa-chevron-down" style="margin-left: 75%;"></i>
+                        </p>
+                        
+                      </p>
+                      <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+                          <input type="text" name="post_tag" style="  height:100%; width: 100%; border: 1px solid rgb(236, 233, 233); "placeholder="Enter Your #tags.." >
+                        </div>
+                      </div>                
+                    </div>
+            </div>
+          </div>
+        </div>
+    </form>
+      </div>
+    </div>
+
+
+
+<script>
+    function countCharacters(textarea) {
+        const text = textarea.value;
+        const charCountElement = document.getElementById('charCount');
+        const charCount = text.length;
+        charCountElement.textContent = `2000/ ${charCount}`;
+      }
+
+</script>
